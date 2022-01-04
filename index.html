@@ -1,30 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:https="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>HandeyMadey에 오신 것을 환영합니다.</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<title>handey madey - 당신이 원하는 핸드메이드 아카이브</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-    <style>
-        .card > img {
-            width: 100%;
-            margin: auto;
-        }
+<style>
+*{
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+a {
+    text-decoration: none;
+}
 
-        .card {
-            margin: auto;
+.card > img {
+    width: 100%;
+    margin: auto;
+}
 
-        }
+.card {
+    margin: auto;
+    text-align: center;
+}
 
-    </style>
+.header > div {
+    position: fixed;
+    fload: left;
+}
+
+.header > button {
+    display: inline-block;
+
+    /*position : fixed;*/
+    float: right;
+    width: 5%;
+    margin-right: 2%;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.logo {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    vertical-align : middle;
+    background-color: pink;
+}
+
+.input-group-lg{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
+
+.center > div > input: placeholder{
+    color: gray;
+    margin: auto;
+}
+
+.center > div {
+    margin: auto;
+}
+
+</style>
+<script>
+$.ajax({
+    type: 'GET',
+    url: '',
+    data: {},
+    success: function(response){
+    }
+});
+
+$.ajax({
+    type: 'POST',
+    url: '',
+    data: {},
+    success: function(response){
+        window.location.reload();
+    }
+});
+</script>
+
 </head>
 
 <body>
-<div class="card" style="width: 18rem;">
-    <img src="http://www.dailygrid.net/news/photo/201905/222392_121702_5346.png" class="card-img-top" alt="...">
-    <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+<div class="CS_Content">
+    <div class="header">
+        <div onclick="">
+            <i class="fas fa-bars fa-3x"></i>
+        </div>
+        <button onclick="" style="text-align:center; vertical-align: middle;">login</button>
+    </div>
+    <div class="logo"><h1>handey madey</h1></div>
+    <div class="center">
+        <div>
+            <input placeholder="검색어를 입력하세요">
+            <div class="input-group input-group-lg" style="background-color: yellow;">
+                <span class="input-group-text" id="inputGroup-sizing-lg"></span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <i class="fal fa-search fa-3x"></i>
+                
+
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="http://www.dailygrid.net/news/photo/201905/222392_121702_5346.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">코멘트 여기</p>
+            </div>
+        </div>
     </div>
 </div>
 
