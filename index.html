@@ -8,8 +8,11 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
 <style>
-*{
-    -ms-user-select: none;
+.CS_Content > div {
+    display: block;
+}
+.logo {
+    -ms-user-select: none; 
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -29,15 +32,16 @@ a {
     text-align: center;
 }
 
+.header {
+    background-color: orange;
+}
 .header > div {
     position: fixed;
-    fload: left;
+    float: left;
 }
 
 .header > button {
     display: inline-block;
-
-    /*position : fixed;*/
     float: right;
     width: 5%;
     margin-right: 2%;
@@ -53,12 +57,23 @@ a {
     background-color: pink;
 }
 
-.input-group-lg{
+.input-group-lg {
     width: 50%;
     margin: auto;
     display: block;
+    position: relative;
 }
 
+.input-group-lg > i {
+    position: absolute;
+    left: 85%;
+    top: 3px;
+}
+
+.center {
+    width: 80%;
+    margin: auto;
+}
 
 .center > div > input: placeholder{
     color: gray;
@@ -68,6 +83,8 @@ a {
 .center > div {
     margin: auto;
 }
+
+
 
 </style>
 <script>
@@ -88,27 +105,23 @@ $.ajax({
     }
 });
 </script>
-
 </head>
 
 <body>
-<div class="CS_Content">
-    <div class="header">
+<div class="CS_Content" style="background-color: black;">
+    <div class="header" style="background-color: orange;">
         <div onclick="">
             <i class="fas fa-bars fa-3x"></i>
         </div>
-        <button onclick="" style="text-align:center; vertical-align: middle;">login</button>
+        <button onclick="location.href='loginPage.html'" style="text-align:center; vertical-align: middle;">login</button>
     </div>
-    <div class="logo"><h1>handey madey</h1></div>
-    <div class="center">
+    <div class="center" style="background-color: whitesmoke;">
+        <div class="logo"><h1>handey madey</h1></div>
         <div>
-            <input placeholder="검색어를 입력하세요">
-            <div class="input-group input-group-lg" style="background-color: yellow;">
+            <div class="input-group input-group-lg">
                 <span class="input-group-text" id="inputGroup-sizing-lg"></span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                    <i class="fal fa-search fa-3x"></i>
-                
-
+                <input type="text" placeholder="검색어를 입력하세요" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <i class="fal fa-search fa-3x"></i>
             </div>
         </div>
         <div class="card" style="width: 18rem;">

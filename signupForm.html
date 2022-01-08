@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>회원가입</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/signupForm.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<style>
+.logo {
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    vertical-align : middle;
+    background-color: pink;
+}
+</style>
+<body>
+<form action="action_page.php" style="border:1px solid #ccc">
+  <div class="header">
+    <div class="logo" onclick="location.href='index.html'"><h1>handey madey</h1></div>
+  </div>
+  <div class="container">
+    <h1>회원가입</h1>
+    <p>아래 양식을 작성해주세요.</p>
+    <hr>
+
+    <label for="email"><b>이메일</b></label>
+    <input type="text" placeholder="이메일을 입력해주세요" name="email" required>
+
+    <label for="psw"><b>비밀번호</b></label>
+    <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+
+    <label for="psw-repeat"><b>비밀번호 확인</b></label>
+    <input type="password" placeholder="비밀번호 확인" name="psw-repeat" required>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 아이디 저장
+    </label>
+
+    <p><a href="#" style="color:dodgerblue">개인정의처리 동의</a></p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">취소하기</button>
+      <button type="submit" class="signupbtn">가입하기</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
