@@ -11,13 +11,19 @@
 .CS_Content > div {
     display: block;
 }
+
 .logo {
     -ms-user-select: none; 
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    vertical-align : middle;
+    background-color: pink;
 }
+
 a {
     text-decoration: none;
 }
@@ -50,13 +56,6 @@ a {
     vertical-align: middle;
 }
 
-.logo {
-    font-family: 'Abril Fatface', cursive;
-    text-align: center;
-    vertical-align : middle;
-    background-color: pink;
-}
-
 .input-group-lg {
     width: 50%;
     margin: auto;
@@ -68,6 +67,8 @@ a {
     position: absolute;
     left: 85%;
     top: 3px;
+    z-index: 6;
+    margin-top: 10rem;
 }
 
 .center {
@@ -109,7 +110,7 @@ $.ajax({
 
 <body>
 <div class="CS_Content" style="background-color: black;">
-    <div class="header" style="background-color: orange;">
+    <div class="header">
         <div onclick="">
             <i class="fas fa-bars fa-3x"></i>
         </div>
@@ -120,7 +121,7 @@ $.ajax({
         <div>
             <div class="input-group input-group-lg">
                 <span class="input-group-text" id="inputGroup-sizing-lg"></span>
-                <input type="text" placeholder="검색어를 입력하세요" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                <input type="text" placeholder="검색어를 입력하세요" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="margin-top: 10rem;>
                 <i class="fal fa-search fa-3x"></i>
             </div>
         </div>
