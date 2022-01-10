@@ -68,5 +68,33 @@ button:hover {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
 
+/* 추가 사항 */
+
+.header{
+  height: 80%;
+  background-color: #0a58ca;
+}
+
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+  vertical-align : middle;
+  background-color: pink;
+  cursor: pointer;
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.container{
+  background: #0c4128;
+}
+
+.clearfix{
+  margin-top : 7rem;
 }

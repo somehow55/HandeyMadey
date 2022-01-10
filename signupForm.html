@@ -9,13 +9,41 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <style>
-.logo {
-    font-family: 'Abril Fatface', cursive;
-    text-align: center;
-    vertical-align : middle;
-    background-color: pink;
-}
 </style>
+<script>
+  $('#signupbtn').click(function (){
+    if($.trim($('#e_mail').val())==""){
+      alert('아이디를 작성해주세요');
+      return false;
+    } else {
+      $('#signupbtn').submit();
+    }
+
+  })
+
+
+function inputCheck(){
+  let e_mail = document.getElementsByName('e_mail').value();
+  let pw1 = document.getElementsByName('pw').value();
+  let pw2 = document.getElementsByName('pw-repeat').value();
+
+  if(e_mail == null) {
+    alert('이메일을 작성해주세요');
+    return false;
+  } else if(pw1 == null {
+    alert('비밀번호를 작성해주세요');
+    return false;
+  } else if(pw2 == null{
+    alert('비밀번호 확인을 작성해주세요');
+    return false;
+  } else if(pw1!=pw2) {
+    alert('비밀번호가 일치하지 않습니다!');
+    return false;
+  } else {
+    return true;
+  }
+}
+</script>
 <body>
 <form action="action_page.php" style="border:1px solid #ccc">
   <div class="header">
@@ -27,23 +55,19 @@
     <hr>
 
     <label for="email"><b>이메일</b></label>
-    <input type="text" placeholder="이메일을 입력해주세요" name="email" required>
+    <input type="text" placeholder="이메일을 입력해주세요" id="e_mail" name="e_mail" required>
 
-    <label for="psw"><b>비밀번호</b></label>
-    <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+    <label for="pw"><b>비밀번호</b></label>
+    <input type="password" placeholder="비밀번호를 입력해주세요" name="pw" required>
 
-    <label for="psw-repeat"><b>비밀번호 확인</b></label>
-    <input type="password" placeholder="비밀번호 확인" name="psw-repeat" required>
+    <label for="pw-repeat"><b>비밀번호 확인</b></label>
+    <input type="password" placeholder="비밀번호 확인" name="pw-repeat" required>
 
-    <label>
-      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> 아이디 저장
-    </label>
-
-    <p><a href="#" style="color:dodgerblue">개인정의처리 동의</a></p>
+<!--    <p><a href="#" style="color:dodgerblue">개인정의처리 동의</a></p>-->
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">취소하기</button>
-      <button type="submit" class="signupbtn">가입하기</button>
+      <button type="submit" id="signupbtn" class="signupbtn" onclick="inputCheck()">가입하기</button>
     </div>
   </div>
 </form>
