@@ -43,6 +43,21 @@ function inputCheck(){
     return true;
   }
 }
+
+function send_data(){
+    let e_mail = $('#e_mail').val();
+    let pw = $('#pw').val();
+    let pw2 = $('#pw2').val();
+
+    $.ajax({
+      type: 'POST',
+      url: '/send_data'
+      data: {},
+      success: function(response){
+        alert("가입을 환영합니다");
+      }
+    })
+}
 </script>
 <body>
 <form action="action_page.php" style="border:1px solid #ccc">
@@ -58,10 +73,10 @@ function inputCheck(){
     <input type="text" placeholder="이메일을 입력해주세요" id="e_mail" name="e_mail" required>
 
     <label for="pw"><b>비밀번호</b></label>
-    <input type="password" placeholder="비밀번호를 입력해주세요" name="pw" required>
+    <input type="password" placeholder="비밀번호를 입력해주세요" id="pw" name="pw" required>
 
     <label for="pw-repeat"><b>비밀번호 확인</b></label>
-    <input type="password" placeholder="비밀번호 확인" name="pw-repeat" required>
+    <input type="password" placeholder="비밀번호 확인" id="pw2" name="pw-repeat" required>
 
 <!--    <p><a href="#" style="color:dodgerblue">개인정의처리 동의</a></p>-->
 
