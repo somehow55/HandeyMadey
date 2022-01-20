@@ -68,6 +68,10 @@ function send_data(){
     <h1>회원가입</h1>
     <p>아래 양식을 작성해주세요.</p>
     <hr>
+<!--    <progress id="progress_bar" value="50" min="0" max="100"></progress>-->
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="70"></meter>
+<!--    optimum = 최적상태! -->
+    <hr>
 
     <label for="email"><b>이메일</b></label>
     <input type="text" placeholder="이메일을 입력해주세요" id="e_mail" name="e_mail" required>
@@ -79,6 +83,10 @@ function send_data(){
     <input type="password" placeholder="비밀번호 확인" id="pw2" name="pw-repeat" required>
 
 <!--    <p><a href="#" style="color:dodgerblue">개인정의처리 동의</a></p>-->
+    <details id="details">
+      <summary>개인정보처리 동의</summary>
+      <span>블라블라! 개인정보 함부로 노출 노노!</span>
+    </details>
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">취소하기</button>

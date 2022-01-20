@@ -13,7 +13,7 @@
 }
 
 .logo {
-    -ms-user-select: none; 
+    -ms-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -117,26 +117,18 @@ $.ajax({
         <button onclick="location.href='loginPage.html'" style="text-align:center; vertical-align: middle;">login</button>
     </div>
     <div class="center" style="background-color: whitesmoke;">
-        <div class="logo"><h1>handey madey</h1></div>
-        <div>
-            <div class="input-group input-group-lg">
-                <span class="input-group-text" id="inputGroup-sizing-lg"></span>
-                <input type="text" placeholder="검색어를 입력하세요" class="form-control" list="handmade-options" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style="margin-top: 10rem;">
-                <i class="fal fa-search fa-3x"></i>
-                <datalist id="handmade-options">
-                    <option value="비즈" />
-                    <option value="뜨개질" />
-                    <option value="마크라메" />
-                    <option value="디지털 드로잉" />
-                </datalist>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="http://www.dailygrid.net/news/photo/201905/222392_121702_5346.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">코멘트 여기</p>
-            </div>
-        </div>
+        <input type="date">
+        <input type="month">
+        <input type="week">
+        <input type="time">
+
+        <picture>
+            <source srcset="src/01.jpg" media="(min-width:1200px)" />
+            <source srcset="src/02.jpg" media="(min-width:900px)" />
+            <source srcset="src/03.jpg" media="(min-width:500px)" />
+            <img src="src/04.jpg" />
+<!--            img는 디폴트! picture, source 태그가 안 먹힐 경우를 대비 -->
+        </picture>
     </div>
 </div>
 

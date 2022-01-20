@@ -98,3 +98,38 @@ button:hover {
 .clearfix{
   margin-top : 7rem;
 }
+
+progress[value]::-webkit-progress-bar {
+  background-color: whitesmoke;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25) inset;
+}
+
+#progress_bar[value] {
+  appearance: none;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#progress_bar[value]::-webkit-progress-value {
+  background-image: linear-gradient(to left, #2ecc71, #3498db);
+}
+::-webkit-meter-inner-element
+::-webkit-meter-even-less-good-value
+/* ↑ 하위 최적값 */
+::-webkit-meter-optimum-value
+/* ↑ 최적값 */
+::-webkit-meter-suboptimum-value
+
+
+#details[open]{
+  background-color: #cdedfd;
+  background-image: linear-gradient(
+  319deg,
+  #cdedfd 0%,
+  #ffec82 37%,
+  #ffcfd2 100%
+  );
+}
